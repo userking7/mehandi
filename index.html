@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="description" content="Zeina Mehandi by Famitha – Natural & Elegant Henna Art in Kozhikode">
+<meta property="og:title" content="Zeina Mehandi by Famitha">
+<meta property="og:description" content="Organic, traditional, and beautiful henna designs for every occasion.">
+<meta property="og:image" content="photo/okok.jpg">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zeina Mehandi - Famitha</title>
@@ -17,9 +22,20 @@
  <link
       rel="icon"
       type="x-icon/png"
-      href="ohoto/icon.png"
+      href="photo/icon.png"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
   <style>
+    footer a {
+  font-size: 1.2rem;
+  margin: 0 15px;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
     body, .navbar, footer {
       transition: background-color 0.3s ease, color 0.3s ease;
     }
@@ -58,12 +74,14 @@
     .dark-mode #styles { background-color: #1d2f26 !important; }
     .dark-mode #contact { background-color: #2b2620 !important; }
 
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), center/cover no-repeat;
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
+.hero {
+  background: radial-gradient(circle at center, #1f1f1f, #000);
+  background-size: cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
     .color-change {
       animation: colorCycle 5s linear infinite;
       font-weight: bold;
@@ -114,15 +132,200 @@
     h1[data-aos], h2[data-aos], h4[data-aos], h5[data-aos], p[data-aos], li[data-aos] {
       opacity: 0;
     }
+
+    /* Multicolor Popper Animation */
+    #popupEffect {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .pop-circle {
+      position: absolute;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: pop 1.2s ease-out forwards;
+    }
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 1; }
+      100% { transform: scale(4); opacity: 0; }
+    }
+    .meta-glow-border {
+  position: relative;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.meta-glow-rotate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #ff4b5c,
+    #ffb400,
+    #00c9a7,
+    #4d7cff,
+    #ff4b5c
+  );
+  z-index: -1;
+  animation: spin 6s linear infinite; /* slower spin */
+  margin: -10px;
+  box-shadow: 0 0 30px rgba(255, 0, 130, 0.4), 0 0 60px rgba(0, 255, 170, 0.2); /* glowing effect */
+  filter: blur(2px); /* smooth glow */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.meta-glow-border img {
+  display: block;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.floating-whatsapp {
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50px;
+  font-size: 26px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: shakeWhatsApp 2s infinite;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  background-color: #1ebe5b;
+  transform: scale(1.05);
+}
+
+.floating-whatsapp i {
+  margin-right: 10px;
+}
+
+/* Label text only visible on wider screens */
+.whatsapp-label {
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+}
+
+/* On phones, show only the icon */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    padding: 12px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 24px;
+  }
+
+  .floating-whatsapp i {
+    margin: 0;
+  }
+
+  .whatsapp-label {
+    display: none;
+  }
+}
+
+@keyframes shakeWhatsApp {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, 2px); }
+  100% { transform: translate(0, 0); }
+}
+
+
+/* Mobile: hide label, show icon only */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    padding: 12px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 24px;
+  }
+
+  .floating-whatsapp i {
+    margin: 0;
+  }
+
+  .whatsapp-label {
+    display: none;
+  }
+}
+h2::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 0 auto 10px;
+  background: linear-gradient(to right, #ff4b5c, #00c9a7);
+  border-radius: 10px;
+}
+body {
+  background: linear-gradient(120deg, #f9f9f9, #ffffff);
+}
+
+#loader-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader {
+  border: 5px solid #ddd;
+  border-top: 5px solid #25D366;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
   </style>
 </head>
 <body>
+<a href="https://wa.me/918714034802?text=Hi%2C%20I%27d%20like%20to%20book%20a%20henna%20design%20appointment%20with%20Zeina%20Mehandi." class="floating-whatsapp" target="_blank" title="Chat Now on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="whatsapp-label">Book Now</span>
+</a>
 
+<div id="loader-wrapper">
+  <div class="loader"></div>
+</div>
+
+<div id="popupEffect"></div>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="photo/zaharaj.png" alt="Logo" width="50" class="me-2 rounded-circle" />
+      <img src="photo/okok.jpg" alt="Logo" width="50" class="me-2 rounded-circle"/>
       Zeina Mehandi
     </a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -147,22 +350,26 @@
 </nav>
 
 <!-- Hero -->
-<section class="hero">
-  <img src="photo/zaharaj.png">
-  <h1 class="display-4 color-change" data-aos="zoom-in">Welcome to Zeina Mehandi</h1>
+<section class="hero" >
+  <div class="meta-glow-border mx-auto" data-aos="zoom-in">
+  <div class="meta-glow-rotate"></div>
+  <img src="photo/okok.jpg" class="img-fluid rounded-circle shadow" alt="Hero Image" style="width: 300px;" />
+</div>
+
+  <h1 class="display-3 color-change" data-aos="zoom-in">Welcome to Zeina Mehandi</h1>
   <p class="lead" data-aos="fade-up">Natural | Elegant | Safe</p>
 </section>
 <!-- about zaina -->
 <section class="container py-5" id="about" style="background-color: #043b15dd;">
   <div class="row align-items-center">
     <div class="col-md-6 mb-4 mb-md-0">
-      <h2 data-aos="fade-left">About Zeina Mehandi</h2>
-      <p data-aos="fade-up">
+      <h2 data-aos="fade-left" style="color: rgb(255, 255, 255);">About Zeina Mehandi</h2>
+      <p data-aos="fade-up" style="color: #f5ca75;">
         Zeina Mehandi by Famitha offers elegant, natural henna art for every occasion — from special events to casual celebrations. My handmade henna paste is 100% organic and crafted with love and care, ensuring a safe and rich stain that lasts up to 2–3 weeks depending on aftercare. Using traditional methods, I create detailed, graceful designs that reflect both beauty and tradition. Whether you want a minimal look or something festive and intricate, every design is applied with precision to make your moments memorable.
       </p>
     </div>
     <div class="col-md-6 text-center">
-      <img src="photo/remo.png" class="img-fluid rounded-circle shadow" alt="Famitha" data-aos="fade-up" style="max-width: 300px;" />
+      <img src="photo/okok.jpg" class="img-fluid rounded-circle shadow" alt="Famitha" data-aos="fade-up" style="max-width: 300px;" />
     </div>
   </div>
 </section>
@@ -178,6 +385,12 @@
     </div>
   </div>
 </section>
+<!-- Separator -->
+<div style="position:relative; overflow:hidden;">
+  <svg viewBox="0 0 1440 100" style="display:block;" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#f0fff0" d="M0,32L1440,96L1440,320L0,320Z"></path>
+  </svg>
+</div>
 
 <!-- Services -->
 <section class="py-5" id="services" style="background-color: #e8f5e9;">
@@ -307,6 +520,11 @@
     </form>
   </div>
 </section>
+<section class="text-center py-5" style="background: linear-gradient(45deg, #00c9a7, #4d7cff); color: white;">
+  <h2 data-aos="zoom-in">🎨 Ready to Book Your Henna Session?</h2>
+  <p data-aos="fade-up">Contact me now and get elegant natural designs for your special day!</p>
+  <a href="https://wa.me/918714034802?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20henna%20design%20with%20Zeina%20Mehandi.%20Could%20you%20please%20share%20the%20available%20dates%20and%20pricing%3F" class="btn btn-light mt-3">Book on WhatsApp</a>
+</section>
 
 <!-- Footer -->
 <footer class="text-center py-4 bg-dark text-white">
@@ -314,7 +532,7 @@
   <p style="font-size: 15px;">+91 8714034802</p>
   <div class="d-flex justify-content-center fs-5">
     <a href="tel:+918714034802"><i class="fas fa-phone me-3"></i></a>
-    <a href="https://wa.me/918714034802" target="_blank"><i class="fab fa-whatsapp me-3"></i></a>
+<a href="https://wa.me/918714034802?text=Hi%2C%20I%27d%20like%20to%20book%20a%20henna%20design%20appointment%20with%20Zeina%20Mehandi."  target="_blank" title="Chat Now on WhatsApp"><i class="fab fa-whatsapp me-3"></i></a>
     <a href="https://www.instagram.com/zeina_mehandi" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
 </footer>
@@ -330,6 +548,26 @@
     document.querySelector('.navbar').classList.toggle('dark-mode');
     document.querySelector('footer').classList.toggle('dark-mode');
   });
+</script>
+<script>
+  // 3D multicolor popper animation on load
+  window.addEventListener('load', () => {
+    const container = document.getElementById('popupEffect');
+    for (let i = 0; i < 80; i++) {
+      const div = document.createElement('div');
+      div.className = 'pop-circle';
+      div.style.top = Math.random() * 100 + '%';
+      div.style.left = Math.random() * 100 + '%';
+      div.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      container.appendChild(div);
+    }
+    setTimeout(() => container.remove(), 2000);
+  });
+</script>
+<script>
+window.addEventListener("load", function() {
+  document.getElementById("loader-wrapper").style.display = "none";
+});
 </script>
 
 </body>
